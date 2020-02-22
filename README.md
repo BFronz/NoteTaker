@@ -17,12 +17,13 @@ npm install package.json
 ```
 
 ## Built With
-HTML
-CSS
-Javascript
-jQuery
-node.js
-Heroku
+* HTML
+* CSS
+* Javascript
+* jQuery
+* node.js
+* Heroku
+* Express
 
  
 ## Special Features
