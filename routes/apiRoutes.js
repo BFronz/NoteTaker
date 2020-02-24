@@ -1,7 +1,5 @@
-
-
 const notesData = require('../notes/db');
-
+const fs       = require("fs");
 
 // ===============================================================================
 // ROUTING
@@ -19,6 +17,13 @@ module.exports = function(app) {
   // post data
   app.post('/api/notes', function(req, res) {
       notesData.push(req.body);
+
+
+      let myJSON = JSON.stringify(notesData);
+      fs.writeFileSync('notes/db.json', myJSON, 'utf8', function(err) { 
+        if (err) throw err;
+      });
+
       res.json(true);
   
   });
