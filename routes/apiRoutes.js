@@ -14,7 +14,7 @@ module.exports = function(app) {
 
  
 
-  // post data
+  // post data with write
   app.post('/api/notes', function(req, res) {
       notesData.push(req.body);
 
@@ -23,6 +23,7 @@ module.exports = function(app) {
       fs.writeFileSync('notes/db.json', myJSON, 'utf8', function(err) { 
         if (err) throw err;
       });
+
 
       res.json(true);
   
